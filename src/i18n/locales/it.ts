@@ -1,0 +1,269 @@
+import type { Dictionary } from "../types";
+
+export const it: Dictionary = {
+  meta: {
+    title: "Hossony — Liuteria dal 1989",
+    description:
+      "Liuteria Hossony, a Taquarituba (Brasile): violini, viole, violoncelli e contrabbassi costruiti a mano e su misura dal 1989, da Eliel Marcos de Almeida.",
+  },
+  tagline: "Liuteria",
+  since: "Dal 1989",
+  nav: {
+    home: "Home",
+    about: "Chi siamo",
+    history: "Storia",
+    team: "Collaboratori",
+    gallery: "Galleria",
+    journal: "Diario",
+    contact: "Contatti",
+    menu: "Menu",
+    close: "Chiudi",
+    language: "Lingua",
+  },
+  hero: {
+    tagline: "Violini, viole, violoncelli e contrabbassi costruiti a mano.",
+    place: "Taquarituba · Brasile · dal 1989",
+    discover: "Scopri la bottega",
+  },
+  footer: {
+    description: "Violini, viole, violoncelli e contrabbassi costruiti a mano e su misura, dal 1989.",
+    navigate: "Naviga",
+    workshop: "Bottega",
+    rights: "Tutti i diritti riservati",
+    handmade: "Fatto a mano, uno per uno.",
+  },
+  cta: { eyebrow: "Strumenti su misura", title: ["Hai uno strumento ", "in mente", "?"], button: "Parla con il liutaio" },
+  alt: {
+    aboutCover: "La bottega di liuteria Hossony a Taquarituba",
+    workshop: "Il banco della bottega Hossony con gli attrezzi da liutaio",
+    bass: "Contrabbasso costruito nella bottega Hossony",
+    cello: "Violoncello costruito nella bottega Hossony",
+    history: "La bottega Hossony nel corso degli anni",
+    family: "Eliel Marcos de Almeida e i figli in bottega",
+    galleryCover: "Strumenti ad arco della bottega Hossony",
+    journalCover: "Dettaglio di legno e vernice di uno strumento Hossony",
+    contact: "La bottega Hossony a Taquarituba, San Paolo",
+  },
+
+  about: {
+    eyebrow: "Chi siamo",
+    title: ["Strumenti con ", "firma", " e anima."],
+    intro:
+      "Dal 1989 Hossony costruisce a mano violini, viole, violoncelli e contrabbassi a Taquarituba, nello stato di San Paolo. Ogni strumento è fatto su misura, a partire dall’idea e dalle esigenze di chi lo suonerà.",
+    body: "Fondata dal liutaio Eliel Marcos de Almeida, la bottega si è distinta per la costruzione su commissione per musicisti esigenti e professionisti. Oggi gli strumenti Hossony suonano in tutto il Brasile — nelle mani di studenti e di musicisti di orchestre sinfoniche.",
+    facts: [
+      { value: "1989", label: "Fondazione di Hossony" },
+      { value: "4", label: "Strumenti ad arco: violino, viola, violoncello e contrabbasso" },
+      { value: "Brasile", label: "Musicisti di tutto il paese, dallo studente all’orchestra sinfonica" },
+    ],
+    servicesEyebrow: "Cosa facciamo",
+    servicesTitle: "Dal progetto all’ultima mano di vernice.",
+    services: [
+      {
+        title: "Costruzione su misura",
+        text: "Ogni strumento nasce da una commissione: misure, timbro e comodità definiti insieme al musicista, perché lo strumento risponda esattamente a ciò che cerca.",
+      },
+      {
+        title: "Personalizzazione",
+        text: "Ricci personalizzati, effe disegnate per il cliente, intagli nel legno e modelli esotici. L’idea del musicista prende forma al banco.",
+      },
+      {
+        title: "Pittura e vernice",
+        text: "Uno dei tratti più riconosciuti di Hossony: pittura e vernice stese a mano, con una finitura d’eccellenza in ogni strato.",
+      },
+    ],
+    specialtyEyebrow: "La nostra specialità",
+    specialtyTitle: ["Contrabbassi e ", "violoncelli", "."],
+    specialtyText:
+      "È negli strumenti gravi che Hossony ha maggiore notorietà e maestria. Contrabbassi e violoncelli costruiti con la stessa attenzione al dettaglio — e, soprattutto, alla qualità del suono.",
+    specialtyPoints: ["Ricci personalizzati", "Effe personalizzate", "Intagli nel legno", "Modelli esotici"],
+    principlesEyebrow: "Principi",
+    principlesTitle: ["Ciò a cui non ", "rinunciamo", " mai."],
+    principles: [
+      { title: "Prima di tutto il suono", text: "La bellezza conta, ma lo scopo è la voce. Tutto nella costruzione è al servizio della qualità sonora." },
+      { title: "L’idea del musicista", text: "Ogni commissione parte da una conversazione. Ascoltiamo il musicista prima di toccare il legno." },
+      { title: "Finitura senza scorciatoie", text: "Pittura, vernice e dettagli fatti a mano, con il tempo che ogni fase richiede." },
+    ],
+  },
+
+  history: {
+    eyebrow: "Storia",
+    title: ["Una storia ", "di famiglia", ", dal 1989."],
+    intro: "Da una piccola bottega di Taquarituba ai musicisti di tutto il Brasile: il percorso di Eliel Marcos de Almeida e della liuteria che porta il marchio Hossony.",
+    steps: [
+      {
+        era: "Le origini",
+        title: "Gli inizi con Luiz Rodrigues",
+        text: "Tutto è cominciato a Taquarituba, accanto a Luiz Rodrigues, che ha avviato la liuteria in famiglia fondando la Nhureson. Lì Eliel Marcos de Almeida ha lavorato e imparato il mestiere.",
+      },
+      {
+        era: "1989",
+        title: "Nasce Hossony",
+        text: "Dopo anni al banco, Eliel ha fondato la propria liuteria e ha creato il marchio Hossony. Lavorando da solo e con i figli, ha iniziato a costruire violini, viole, violoncelli e contrabbassi.",
+      },
+      {
+        era: "Su misura",
+        title: "Per i musicisti più esigenti",
+        text: "Hossony si è distinta per la maestria nella costruzione su commissione: strumenti su misura per musicisti professionisti, costruiti a partire dall’idea di ogni cliente.",
+      },
+      {
+        era: "Tutto il Brasile",
+        title: "Dallo studente all’orchestra sinfonica",
+        text: "Gli strumenti Hossony hanno conquistato il paese e sono arrivati a ogni tipo di musicista — dagli studenti ai componenti delle orchestre sinfoniche.",
+      },
+      {
+        era: "La firma",
+        title: "Contrabbassi, violoncelli e vernice",
+        text: "Contrabbassi e violoncelli sono diventati la grande specialità della bottega, con ricci ed effe personalizzati, intagli e modelli esotici — e un’eccellenza riconosciuta nella pittura, nella vernice e, soprattutto, nel suono.",
+      },
+      {
+        era: "Oggi",
+        title: "Un mestiere che continua in famiglia",
+        text: "Padre e figli lavorano fianco a fianco al banco, mantenendo lo stesso standard che ha costruito il nome Hossony.",
+      },
+    ],
+    nameEyebrow: "Il nome",
+    nameTitle: ["Da dove viene ", "Hossony", "?"],
+    nameText:
+      "Il nome è nato dall’ammirazione di Eliel per due marchi che ha sempre amato: Höfner, storico costruttore di strumenti, e Sony. Dall’unione dei due è nato Hossony.",
+    quote: "«Uno strumento non si finisce — si consegna, e continua a essere costruito da chi lo suona.»",
+    quoteSource: "Detto di bottega",
+  },
+
+  team: {
+    eyebrow: "Collaboratori",
+    title: ["Una famiglia, ", "una firma", "."],
+    intro: "In Hossony il mestiere passa di mano in mano all’interno della stessa famiglia. Sono le persone dietro ogni strumento — e il nome che ognuno di essi porta.",
+    members: {
+      eliel: {
+        role: "Maestro liutaio · Fondatore",
+        bio: "Ha imparato il mestiere a Taquarituba, accanto a Luiz Rodrigues, e ha fondato Hossony nel 1989. È riconosciuto per i contrabbassi e i violoncelli, per l’eccellenza nella pittura e nella vernice e per la qualità sonora di ogni strumento che costruisce.",
+      },
+      ricardo: {
+        role: "Liutaio",
+        bio: "Figlio di Eliel, è cresciuto in bottega e lavora al banco accanto al padre, applicando gli stessi metodi perché ogni strumento mantenga lo standard che ha dato il nome a Hossony.",
+      },
+    },
+    traditionEyebrow: "Tradizione di famiglia",
+    traditionTitle: ["Il nome ", "Hossony", " in ogni strumento."],
+    tradition: [
+      "Dal 1989 Hossony è un lavoro di famiglia. Eliel ha lavorato da solo e con i figli, tramandando gli attrezzi, le forme e i segreti della pittura e della vernice.",
+      "Ogni strumento porta all’interno l’etichetta di famiglia, firmata a mano. È la nostra garanzia di paternità e di autenticità — e l’impegno che nessun pezzo lasci il banco senza la qualità di sempre.",
+    ],
+    sealEyebrow: "Firma e autenticità",
+    sealTitle: ["Costruito da noi, ", "firmato", " da noi."],
+    sealPoints: [
+      { title: "Etichetta firmata", text: "Ogni strumento riceve l’etichetta Hossony, firmata dal liutaio che lo ha costruito." },
+      { title: "Fatto su misura", text: "Ogni pezzo nasce dall’idea del musicista — misure, modello e finitura pensati per lui." },
+      { title: "Senza perdita di qualità", text: "Gli stessi metodi e la stessa cura, strumento dopo strumento, dal 1989." },
+    ],
+    labelCaption: "L’etichetta incollata all’interno di ogni strumento, visibile attraverso la effe.",
+  },
+
+  gallery: {
+    eyebrow: "Catalogo",
+    title: ["Strumenti ", "usciti", " dalla bottega."],
+    intro: "Ogni pezzo con la sua scheda: modello, colore, vernice, accessori e il riferimento che lo ha ispirato.",
+    kinds: { violino: "Violino", viola: "Viola", violoncelo: "Violoncello", contrabaixo: "Contrabbasso" },
+    specs: { model: "Modello", color: "Colore", varnish: "Vernice", inspired: "Ispirato a", accessories: "Accessori" },
+    consult: "Richiedi informazioni",
+    items: {
+      "contrabaixo-1": {
+        name: "Contrabbasso Hossony",
+        description: "Costruito su commissione, con riccio intagliato a mano ed effe disegnate per il musicista. Bassi profondi e ampia proiezione.",
+        color: "Castano scuro",
+        varnish: "Vernice a olio, con pittura fatta a mano",
+        inspiredBy: "Modello a spalle spioventi, tradizione italiana",
+        accessories: ["Custodia imbottita", "Arco", "Colofonia"],
+      },
+      "violoncelo-1": {
+        name: "Violoncello Hossony",
+        description: "Voce corposa e risposta pronta, pensato per il musicista professionista. Vernice ambrata con ombreggiatura anticata.",
+        color: "Ambra rossiccia",
+        varnish: "Vernice a olio con ombreggiatura",
+        inspiredBy: "Modello classico italiano",
+        accessories: ["Astuccio rigido", "Arco", "Colofonia"],
+      },
+      "violino-1": {
+        name: "Violino Hossony",
+        description: "Tavola in abete e fondo in acero marezzato. Brillantezza, equilibrio e comodità per studenti avanzati e professionisti.",
+        color: "Ambra dorata",
+        varnish: "Vernice a olio in mani sottili",
+        inspiredBy: "Modello Stradivari",
+        accessories: ["Astuccio", "Arco", "Colofonia"],
+      },
+      "viola-1": {
+        name: "Viola Hossony",
+        description: "Timbro scuro e vellutato, con misure definite insieme al musicista.",
+        color: "Rosso Cremona",
+        varnish: "Vernice ad alcool, lucidata a mano",
+        inspiredBy: "Modello Guarneri",
+        accessories: ["Astuccio", "Arco", "Colofonia"],
+      },
+    },
+  },
+
+  journal: {
+    eyebrow: "Diario di bottega",
+    title: ["Note su legno, suono e ", "pazienza", "."],
+    latest: "Più recente",
+    read: "Leggi l’articolo",
+    more: "Continua a leggere",
+    back: "Diario",
+    posts: {
+      "por-que-a-madeira-precisa-descansar": {
+        title: "Perché il legno deve riposare",
+        excerpt: "Prima di diventare strumento, l’abete e l’acero stagionano per anni. Ecco perché questa attesa cambia il suono.",
+        body: [
+          "Il legno fresco è ancora vivo: trattiene acqua, si muove, si imbarca. Uno strumento costruito con esso si creperebbe e perderebbe l’accordatura in poco tempo.",
+          "Per questo il legno da liuteria stagiona naturalmente, all’aria, per molti anni. In questo tempo le fibre si stabilizzano e la tavola diventa più leggera e più risonante.",
+          "In bottega ogni pezzo viene battuto con le nocche prima di essere scelto. Il suono che restituisce dice già molto dello strumento che potrà diventare.",
+        ],
+      },
+      "a-alma-do-instrumento": {
+        title: "L’anima dello strumento",
+        excerpt: "Un piccolo cilindro di abete, senza colla, nascosto all’interno della cassa. Pochi millimetri che definiscono la voce.",
+        body: [
+          "All’interno di ogni violino, viola, violoncello e contrabbasso c’è un pezzo chiamato anima: un cilindro di abete tenuto solo a pressione tra la tavola e il fondo.",
+          "Trasmette la vibrazione tra le due piastre e sostiene la pressione delle corde. Spostare l’anima di mezzo millimetro cambia già la brillantezza e la risposta dello strumento.",
+          "Per questo la regolazione è un lavoro di pazienza: regolare, suonare, ascoltare e regolare di nuovo.",
+        ],
+      },
+      "cuidados-no-tempo-seco": {
+        title: "Cura dello strumento con il clima secco",
+        excerpt: "L’umidità bassa è la peggior nemica del legno. Alcune semplici abitudini evitano crepe e scollature.",
+        body: [
+          "Quando l’aria diventa secca, il legno perde umidità e si ritira. È allora che compaiono le crepe sulla tavola e le giunture scollate.",
+          "Conserva lo strumento nella custodia, lontano dall’aria condizionata e dalle finestre al sole. Un umidificatore da custodia aiuta molto.",
+          "E al primo segno di ronzio o di crepa, rivolgiti al liutaio: prima si interviene, più semplice è la riparazione.",
+        ],
+      },
+    },
+  },
+
+  contact: {
+    eyebrow: "Contatti",
+    title: ["Parliamo del tuo ", "strumento", "."],
+    intro: "Commissioni, preventivi o una visita in bottega a Taquarituba. Parla direttamente con il liutaio.",
+    labels: { phone: "Telefono · WhatsApp", email: "E-mail", instagram: "Instagram", address: "Bottega" },
+    country: "Brasile",
+    directions: "Come arrivare",
+    visit: "Per visitare la bottega, accordati prima su WhatsApp.",
+    mapTitle: "Mappa della bottega Hossony a Taquarituba",
+    form: {
+      title: "Scrivi alla bottega",
+      subtitle: "Il messaggio si apre già pronto su WhatsApp o nella tua e-mail.",
+      name: "Il tuo nome",
+      namePlaceholder: "Come possiamo chiamarti?",
+      subject: "Argomento",
+      subjects: ["Strumento su misura", "Preventivo", "Personalizzazione", "Visita in bottega", "Altro"],
+      message: "Messaggio",
+      messagePlaceholder: "Raccontaci quale strumento cerchi, per quale uso e come lo immagini…",
+      sendWhatsapp: "Invia su WhatsApp",
+      sendEmail: "oppure via e-mail",
+      template: "Buongiorno! Mi chiamo {name}.\nArgomento: {subject}\n\n",
+    },
+  },
+
+  notFound: { eyebrow: "Pagina non trovata", title: ["Questo pezzo ", "non", " è qui."], back: "Torna alla home" },
+};
