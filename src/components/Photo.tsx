@@ -18,6 +18,7 @@ export function Photo({
   label,
   className = "aspect-[4/5]",
   frame = true,
+  fit = "cover",
   sizes = "(min-width: 768px) 50vw, 100vw",
 }: {
   src: string;
@@ -29,6 +30,8 @@ export function Photo({
   label?: string;
   className?: string;
   frame?: boolean;
+  /** "contain" mostra a foto inteira, sem cortar as bordas */
+  fit?: "cover" | "contain";
   /** Largura exibida, para o navegador baixar só o tamanho necessário */
   sizes?: string;
 }) {
@@ -41,7 +44,7 @@ export function Photo({
           alt={alt}
           fill
           sizes={sizes}
-          className="photo-img h-full w-full object-cover transition-transform duration-[1600ms] ease-[var(--ease-luxe)] group-hover:scale-[1.03]"
+          className={`photo-img h-full w-full ${fit === "contain" ? "object-contain" : "object-cover"} transition-transform duration-[1600ms] ease-[var(--ease-luxe)] group-hover:scale-[1.03]`}
         />
       ) : (
         <div role="img" aria-label={alt} className="flex h-full w-full items-center justify-center px-[8%] pt-[8%] pb-[6%]" style={{ color: tone }}>

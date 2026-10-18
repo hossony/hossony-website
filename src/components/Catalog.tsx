@@ -30,7 +30,7 @@ export function Catalog({ lang, t }: { lang: Locale; t: GalleryDict }) {
           <section key={item.id} aria-labelledby={`peca-${i}`} style={{ background: i % 2 ? tint(item.tone, 7) : undefined }}>
             <div className="mx-auto grid max-w-[1320px] items-center gap-10 px-6 py-20 md:grid-cols-2 md:gap-16 md:px-10 md:py-28 lg:gap-24">
               <Reveal className={reversed ? "md:order-2" : ""}>
-                <Photo src={item.src} alt={text.name} tone={item.tone} kind={item.kind} label={kind} />
+                <Photo src={item.src} alt={text.name} tone={item.tone} kind={item.kind} label={kind} fit="contain" className="aspect-[6/5]" />
               </Reveal>
 
               <Reveal delay={150} className={reversed ? "md:order-1" : ""}>
