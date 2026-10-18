@@ -16,7 +16,7 @@ export const site = {
   },
   address: {
     street: "Rua Engenheiro Bernardo Martins Júnior, 25",
-    district: "Conjunto Habitacional Firmo de Melo",
+    district: "Vila Amélia",
     city: "Taquarituba · SP",
     zip: "18743-082",
   },
@@ -49,8 +49,8 @@ export const hero = {
 export const photos = {
   aboutCover: "/fotos/sobre-capa.jpg", // capa do Sobre (oficina) — horizontal, 2400px
   workshop: "/fotos/oficina-bancada.jpg", // bancada / ferramentas — vertical
-  bass: "/fotos/contrabaixo.jpg", // contrabaixo em destaque — vertical
-  cello: "/fotos/violoncelo.jpg", // violoncelo em destaque — vertical
+  bass: "/fotos/contrabaixo3.png", // contrabaixo em destaque — vertical
+  cello: "/fotos/cello2.jpg", // violoncelo em destaque — vertical
   history: "/fotos/historia.jpg", // foto antiga ou da oficina — horizontal
   family: "/fotos/familia.jpg", // pai e filhos na oficina — horizontal
   galleryCover: "/fotos/galeria.jpg", // instrumentos reunidos — horizontal
@@ -80,8 +80,8 @@ export interface GalleryPiece {
 }
 
 export const gallery: GalleryPiece[] = [
-  { id: "contrabaixo-1", kind: "contrabaixo", tone: "#5f3522", src: "/galeria/contrabaixo-1.jpg" },
-  { id: "violoncelo-1", kind: "violoncelo", tone: "#8a4426", src: "/galeria/violoncelo-1.jpg" },
+  { id: "contrabaixo-1", kind: "contrabaixo", tone: "#5f3522", src: "/galeria/contrabaixo3.png" },
+  { id: "violoncelo-1", kind: "violoncelo", tone: "#8a4426", src: "/galeria/cello2.png" },
   { id: "violino-1", kind: "violino", tone: "#b5832c", src: "/galeria/violino-1.jpg" },
   { id: "viola-1", kind: "viola", tone: "#8e2f22", src: "/galeria/viola-1.jpg" },
 ];
