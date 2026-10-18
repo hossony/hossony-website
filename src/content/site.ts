@@ -37,7 +37,7 @@ export const mapsEmbedUrl = `https://www.google.com/maps?q=${mapsQuery}&z=16&out
  */
 export const hero = {
   logo: "/logo.png",
-  background: "/hero.jpg",
+  background: "/hero1.jpg",
   /** "escuro" escurece a foto (para logo clara); "claro" clareia a foto (para logo escura) */
   overlay: "escuro" as "escuro" | "claro",
 };
