@@ -23,7 +23,7 @@ export function Logo({ animated = false, tagline = "Luteria" }: { animated?: boo
           x="110"
           y="138"
           textAnchor="middle"
-          fontFamily="Cormorant Garamond, Georgia, serif"
+          fontFamily="var(--font-cormorant), Georgia, serif"
           fontSize="104"
           fontStyle="italic"
           fontWeight="300"

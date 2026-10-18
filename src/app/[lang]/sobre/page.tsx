@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { CallToAction } from "@/components/CallToAction";
 import { Footer } from "@/components/Footer";
 import { InstrumentEnsemble } from "@/components/InstrumentDrawing";
@@ -28,8 +29,7 @@ export default async function Sobre({ params }: PageProps<"/[lang]/sobre">) {
         {/* capa com foto da oficina */}
         <section className="relative flex min-h-[92svh] items-end overflow-hidden bg-nogueira text-cream">
           {hasCover ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={photos.aboutCover} alt={t.alt.aboutCover} className="cover-zoom absolute inset-0 h-full w-full object-cover" />
+            <Image src={photos.aboutCover} alt={t.alt.aboutCover} fill preload sizes="100vw" className="cover-zoom object-cover" />
           ) : (
             <div aria-hidden className="absolute inset-0 flex items-end justify-end px-6 pb-10 pt-32 text-cream/15 md:px-16">
               <InstrumentEnsemble className="fade h-[78%] w-full max-w-[720px]" />

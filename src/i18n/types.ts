@@ -114,6 +114,8 @@ export interface Dictionary {
       subtitle: string;
       name: string;
       namePlaceholder: string;
+      email: string;
+      emailPlaceholder: string;
       subject: string;
       subjects: string[];
       message: string;
@@ -122,6 +124,9 @@ export interface Dictionary {
       sendEmail: string;
       /** Use {name} e {subject} */
       template: string;
+      sending: string;
+      sent: string;
+      error: string;
     };
   };
   notFound: { eyebrow: string; title: Rich; back: string };

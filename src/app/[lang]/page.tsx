@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Logo } from "@/components/Logo";
 import { hero } from "@/content/site";
@@ -16,8 +17,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       {hasBg ? (
         <>
           {/* foto de fundo com aproximação lenta */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={hero.background} alt="" aria-hidden className="hero-zoom absolute inset-0 h-full w-full object-cover" />
+          <Image src={hero.background} alt="" aria-hidden fill preload sizes="100vw" className="hero-zoom object-cover" />
           <div
             aria-hidden
             className="absolute inset-0"
@@ -48,10 +48,13 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
 
       <div className="relative">
         {hasLogo ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
+          <Image
             src={hero.logo}
             alt={t.meta.title}
+            width={800}
+            height={800}
+            preload
+            sizes="(min-width: 1024px) 380px, (min-width: 640px) 320px, 240px"
             className="fade-up h-auto w-[240px] max-w-[70vw] object-contain sm:w-[320px] lg:w-[380px]"
             style={{ ["--delay" as string]: "300ms" } as React.CSSProperties}
           />

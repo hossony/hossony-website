@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { CallToAction } from "@/components/CallToAction";
 import { Footer } from "@/components/Footer";
 import { Container, PageHeader } from "@/components/PageHeader";
@@ -37,10 +38,11 @@ function Portrait({ member }: { member: (typeof team)[number] }) {
   return (
     <div className="group relative aspect-[4/5] w-full overflow-hidden" style={{ background: tint(member.tone, 14) }}>
       {hasPhoto ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
+        <Image
           src={member.photo}
           alt={member.name}
+          fill
+          sizes="(min-width: 768px) 50vw, 100vw"
           className="h-full w-full object-cover grayscale-[15%] transition-[transform,filter] duration-[1600ms] ease-[var(--ease-luxe)] group-hover:scale-[1.03] group-hover:grayscale-0"
         />
       ) : (

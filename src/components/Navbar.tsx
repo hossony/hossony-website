@@ -128,8 +128,9 @@ export function Navbar({ lang, t, tagline, darkTop = [] }: { lang: Locale; t: Na
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,backdrop-filter] duration-700 ${
-          solid ? "border-b border-line/80 bg-cream/85 backdrop-blur-md" : "border-b border-transparent"
+        className={`fixed inset-x-0 top-0 z-50 transition-[background-color,border-color] duration-700 ${
+          // desfoque só em telas maiores: no celular o fundo quase opaco tem o mesmo efeito sem custo de GPU
+          solid ? "border-b border-line/80 bg-cream/95 md:bg-cream/85 md:backdrop-blur-md" : "border-b border-transparent"
         }`}
       >
         <div className="mx-auto flex h-[76px] max-w-[1320px] items-center justify-between gap-6 px-6 md:h-[88px] md:px-10">

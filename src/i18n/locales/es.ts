@@ -252,9 +252,11 @@ export const es: Dictionary = {
     mapTitle: "Mapa del taller Hossony en Taquarituba",
     form: {
       title: "Escribe al taller",
-      subtitle: "El mensaje se abre listo en WhatsApp o en tu correo.",
+      subtitle: "El mensaje va por WhatsApp o llega directo al correo del taller.",
       name: "Tu nombre",
       namePlaceholder: "¿Cómo te llamamos?",
+      email: "Tu correo",
+      emailPlaceholder: "Para responderte por correo",
       subject: "Asunto",
       subjects: ["Instrumento a medida", "Presupuesto", "Personalización", "Visita al taller", "Otro asunto"],
       message: "Mensaje",
@@ -262,6 +264,9 @@ export const es: Dictionary = {
       sendWhatsapp: "Enviar por WhatsApp",
       sendEmail: "o por correo",
       template: "¡Hola! Me llamo {name}.\nAsunto: {subject}\n\n",
+      sending: "Enviando…",
+      sent: "¡Mensaje enviado! Te responderemos pronto.",
+      error: "No se pudo enviar ahora. Inténtalo por WhatsApp.",
     },
   },
 

@@ -1,16 +1,20 @@
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
-import "@fontsource/cormorant-garamond/300.css";
-import "@fontsource/cormorant-garamond/400.css";
-import "@fontsource/cormorant-garamond/500.css";
-import "@fontsource/cormorant-garamond/300-italic.css";
-import "@fontsource/cormorant-garamond/400-italic.css";
+import { Cormorant_Garamond } from "next/font/google";
 import "../globals.css";
 import { Navbar } from "@/components/Navbar";
 import { hero, site } from "@/content/site";
 import { getLocale, localeParams } from "@/i18n";
 import { locales, localeTags } from "@/i18n/config";
 import { publicFileExists } from "@/lib/public-file";
+
+// fonte variável hospedada junto com o site: um arquivo por estilo, pré-carregado e sem "pulo" de layout
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin", "latin-ext"],
+  style: ["normal", "italic"],
+  variable: "--font-cormorant",
+  display: "swap",
+});
 
 export function generateStaticParams() {
   return localeParams();
@@ -29,7 +33,7 @@ export async function generateMetadata({ params }: LayoutProps<"/[lang]">): Prom
 export default async function RootLayout({ children, params }: LayoutProps<"/[lang]">) {
   const { lang, t } = await getLocale(params);
   return (
-    <html lang={localeTags[lang]} className={`${GeistSans.variable} h-full`}>
+    <html lang={localeTags[lang]} className={`${GeistSans.variable} ${cormorant.variable} h-full`}>
       <body className="grain flex min-h-full flex-col">
         <Navbar
           lang={lang}

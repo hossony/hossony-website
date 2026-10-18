@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Instrument } from "@/content/site";
 import { publicFileExists } from "@/lib/public-file";
 import { InstrumentDrawing, InstrumentEnsemble } from "./InstrumentDrawing";
@@ -17,6 +18,7 @@ export function Photo({
   label,
   className = "aspect-[4/5]",
   frame = true,
+  sizes = "(min-width: 768px) 50vw, 100vw",
 }: {
   src: string;
   alt: string;
@@ -27,16 +29,18 @@ export function Photo({
   label?: string;
   className?: string;
   frame?: boolean;
+  /** Largura exibida, para o navegador baixar só o tamanho necessário */
+  sizes?: string;
 }) {
   const has = publicFileExists(src);
   return (
     <div className={`group relative w-full overflow-hidden ${className}`} style={{ background: tint(tone, 14) }}>
       {has ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
+        <Image
           src={src}
           alt={alt}
-          loading="lazy"
+          fill
+          sizes={sizes}
           className="photo-img h-full w-full object-cover transition-transform duration-[1600ms] ease-[var(--ease-luxe)] group-hover:scale-[1.03]"
         />
       ) : (
@@ -64,7 +68,13 @@ export function PhotoBand({ src, alt, tone = "#8c4a22", caption }: { src: string
   return (
     <Reveal className="band mx-auto w-full max-w-[1320px] px-6 md:px-10">
       <figure>
-        <Photo src={src} alt={alt} tone={tone} className="aspect-[4/3] sm:aspect-[16/9] lg:aspect-[21/9]" />
+        <Photo
+          src={src}
+          alt={alt}
+          tone={tone}
+          sizes="(min-width: 1320px) 1240px, 100vw"
+          className="aspect-[4/3] sm:aspect-[16/9] lg:aspect-[21/9]"
+        />
         {caption && <figcaption className="serif mt-4 text-[15px] italic text-mute">{caption}</figcaption>}
       </figure>
     </Reveal>

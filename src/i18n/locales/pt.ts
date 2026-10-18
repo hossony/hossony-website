@@ -254,9 +254,11 @@ export const pt: Dictionary = {
     mapTitle: "Mapa da oficina Hossony em Taquarituba",
     form: {
       title: "Escreva para a oficina",
-      subtitle: "A mensagem abre pronta no WhatsApp ou no seu e-mail.",
+      subtitle: "A mensagem segue pelo WhatsApp ou chega direto no e-mail da oficina.",
       name: "Seu nome",
       namePlaceholder: "Como podemos chamar você?",
+      email: "Seu e-mail",
+      emailPlaceholder: "Para respondermos por e-mail",
       subject: "Assunto",
       subjects: ["Encomenda sob medida", "Orçamento", "Personalização", "Visita à oficina", "Outro assunto"],
       message: "Mensagem",
@@ -264,6 +266,9 @@ export const pt: Dictionary = {
       sendWhatsapp: "Enviar pelo WhatsApp",
       sendEmail: "ou por e-mail",
       template: "Olá! Meu nome é {name}.\nAssunto: {subject}\n\n",
+      sending: "Enviando…",
+      sent: "Mensagem enviada! Responderemos em breve.",
+      error: "Não foi possível enviar agora. Tente pelo WhatsApp.",
     },
   },
 

@@ -252,9 +252,11 @@ export const fr: Dictionary = {
     mapTitle: "Carte de l’atelier Hossony à Taquarituba",
     form: {
       title: "Écrire à l’atelier",
-      subtitle: "Le message s’ouvre déjà rédigé dans WhatsApp ou dans votre messagerie.",
+      subtitle: "Le message part sur WhatsApp ou arrive directement dans la boîte de l’atelier.",
       name: "Votre nom",
       namePlaceholder: "Comment vous appeler ?",
+      email: "Votre e-mail",
+      emailPlaceholder: "Pour vous répondre par e-mail",
       subject: "Objet",
       subjects: ["Instrument sur mesure", "Devis", "Personnalisation", "Visite de l’atelier", "Autre demande"],
       message: "Message",
@@ -262,6 +264,9 @@ export const fr: Dictionary = {
       sendWhatsapp: "Envoyer par WhatsApp",
       sendEmail: "ou par e-mail",
       template: "Bonjour ! Je m’appelle {name}.\nObjet : {subject}\n\n",
+      sending: "Envoi…",
+      sent: "Message envoyé ! Nous vous répondrons bientôt.",
+      error: "Envoi impossible pour le moment. Essayez par WhatsApp.",
     },
   },
 
