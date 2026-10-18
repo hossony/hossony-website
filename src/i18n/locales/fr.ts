@@ -56,6 +56,9 @@ export const fr: Dictionary = {
       { value: "4", label: "Instruments à archet : violon, alto, violoncelle et contrebasse" },
       { value: "Brésil", label: "Des musiciens de tout le pays, de l’étudiant à l’orchestre symphonique" },
     ],
+    madeEyebrow: "Instruments fabriqués",
+    madeTitle: "Les pièces déjà sorties de notre établi.",
+    madeKinds: { violino: "Violons", viola: "Altos", violoncelo: "Violoncelles", contrabaixo: "Contrebasses" },
     servicesEyebrow: "Notre savoir-faire",
     servicesTitle: "Du projet à la dernière couche de vernis.",
     services: [

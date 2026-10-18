@@ -56,6 +56,9 @@ export const de: Dictionary = {
       { value: "4", label: "Streichinstrumente: Violine, Bratsche, Violoncello und Kontrabass" },
       { value: "Brasilien", label: "Musiker im ganzen Land, vom Studierenden bis zum Sinfonieorchester" },
     ],
+    madeEyebrow: "Gebaute Instrumente",
+    madeTitle: "Was unsere Werkbank bereits verlassen hat.",
+    madeKinds: { violino: "Violinen", viola: "Bratschen", violoncelo: "Celli", contrabaixo: "Kontrabässe" },
     servicesEyebrow: "Was wir tun",
     servicesTitle: "Vom Entwurf bis zur letzten Lackschicht.",
     services: [

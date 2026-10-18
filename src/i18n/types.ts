@@ -47,6 +47,10 @@ export interface Dictionary {
     intro: string;
     body: string;
     facts: { value: string; label: string }[];
+    madeEyebrow: string;
+    madeTitle: string;
+    /** Nomes no plural, para o contador de instrumentos fabricados */
+    madeKinds: Record<Instrument, string>;
     servicesEyebrow: string;
     servicesTitle: string;
     services: Item[];

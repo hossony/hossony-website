@@ -56,6 +56,9 @@ export const en: Dictionary = {
       { value: "4", label: "Bowed instruments: violin, viola, cello and double bass" },
       { value: "Brazil", label: "Musicians across the country, from students to symphony orchestras" },
     ],
+    madeEyebrow: "Instruments made",
+    madeTitle: "Pieces that have already left our bench.",
+    madeKinds: { violino: "Violins", viola: "Violas", violoncelo: "Cellos", contrabaixo: "Double basses" },
     servicesEyebrow: "What we do",
     servicesTitle: "From the first sketch to the final coat of varnish.",
     services: [

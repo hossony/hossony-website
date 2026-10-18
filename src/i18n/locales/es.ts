@@ -56,6 +56,9 @@ export const es: Dictionary = {
       { value: "4", label: "Instrumentos de arco: violín, viola, violonchelo y contrabajo" },
       { value: "Brasil", label: "Músicos de todo el país, del estudiante a la orquesta sinfónica" },
     ],
+    madeEyebrow: "Instrumentos fabricados",
+    madeTitle: "Piezas que ya salieron de nuestro banco de trabajo.",
+    madeKinds: { violino: "Violines", viola: "Violas", violoncelo: "Violonchelos", contrabaixo: "Contrabajos" },
     servicesEyebrow: "Lo que hacemos",
     servicesTitle: "Del proyecto a la última capa de barniz.",
     services: [

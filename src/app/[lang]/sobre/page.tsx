@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { CallToAction } from "@/components/CallToAction";
+import { Counter } from "@/components/Counter";
 import { Footer } from "@/components/Footer";
 import { InstrumentEnsemble } from "@/components/InstrumentDrawing";
 import { Container } from "@/components/PageHeader";
 import { Photo } from "@/components/Photo";
 import { Reveal } from "@/components/Reveal";
 import { Rich } from "@/components/Rich";
-import { photos } from "@/content/site";
+import { made, photos } from "@/content/site";
 import { getLocale } from "@/i18n";
+import { localeTags } from "@/i18n/config";
 import { publicFileExists } from "@/lib/public-file";
 
 const ROMAN = ["I", "II", "III", "IV", "V"];
@@ -83,6 +85,29 @@ export default async function Sobre({ params }: PageProps<"/[lang]/sobre">) {
             ))}
           </Container>
         </section>
+
+        {/* instrumentos fabricados */}
+        <Container className="py-24 md:py-32">
+          <Reveal>
+            <p className="eyebrow text-varnish">{a.madeEyebrow}</p>
+            <h2 className="serif mt-5 max-w-3xl text-[42px] font-light leading-[1.02] md:text-[58px]">{a.madeTitle}</h2>
+          </Reveal>
+          <div className="mt-16 grid grid-cols-2 border-t border-line lg:grid-cols-4">
+            {made.map((m, i) => (
+              <Reveal
+                key={m.kind}
+                delay={i * 120}
+                className="border-b border-line py-10 max-lg:odd:pr-6 max-lg:even:border-l max-lg:even:pl-6 lg:border-b-0 lg:px-8 lg:first:pl-0 lg:[&:not(:first-child)]:border-l"
+              >
+                <p className="serif text-[48px] font-light leading-none text-varnish sm:text-[60px] lg:text-[72px]">
+                  <Counter value={m.count} locale={localeTags[lang]} />
+                  <span className="text-ambar">+</span>
+                </p>
+                <p className="eyebrow mt-5 text-soft">{a.madeKinds[m.kind]}</p>
+              </Reveal>
+            ))}
+          </div>
+        </Container>
 
         {/* serviços */}
         <section className="bg-tint-musgo py-24 md:py-32">

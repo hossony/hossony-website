@@ -60,6 +60,14 @@ export const photos = {
 
 export type Instrument = "violino" | "viola" | "violoncelo" | "contrabaixo";
 
+/** Contador de instrumentos fabricados (página Sobre). O "+" é acrescentado na tela. */
+export const made: { kind: Instrument; count: number }[] = [
+  { kind: "violino", count: 3000 },
+  { kind: "contrabaixo", count: 140 },
+  { kind: "violoncelo", count: 250 },
+  { kind: "viola", count: 230 },
+];
+
 /** Colaboradores. Fotos em /public/equipe (retrato vertical, ~1200×1500). */
 export const team = [
   { id: "eliel", name: "Eliel Marcos de Almeida", initials: "EM", photo: "/equipe/eliel-marcos-de-almeida.jpg", tone: "#8c4a22" },
