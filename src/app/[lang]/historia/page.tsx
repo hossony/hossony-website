@@ -7,6 +7,7 @@ import { Reveal } from "@/components/Reveal";
 import { Rich } from "@/components/Rich";
 import { photos } from "@/content/site";
 import { getLocale } from "@/i18n";
+import { breadcrumbJsonLd, JsonLd, pageMetadata } from "@/lib/seo";
 
 const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII"];
 const TONES = [
@@ -19,8 +20,8 @@ const TONES = [
 ];
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/historia">): Promise<Metadata> {
-  const { t } = await getLocale(params);
-  return { title: t.nav.history, description: t.history.intro };
+  const { lang, t } = await getLocale(params);
+  return pageMetadata(lang, "/historia", { title: t.nav.history, description: t.history.intro, image: photos.history });
 }
 
 export default async function Historia({ params }: PageProps<"/[lang]/historia">) {
@@ -29,6 +30,7 @@ export default async function Historia({ params }: PageProps<"/[lang]/historia">
   return (
     <>
       <main>
+        <JsonLd data={breadcrumbJsonLd(lang, t, [{ name: t.nav.history, path: "/historia" }])} />
         <PageHeader index="ii." eyebrow={`${h.eyebrow} · ${t.since}`} title={<Rich parts={h.title} />} intro={h.intro} />
 
         <PhotoBand src={photos.history} alt={t.alt.history} tone="#8c4a22" />

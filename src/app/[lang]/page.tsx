@@ -1,9 +1,16 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Logo } from "@/components/Logo";
-import { hero } from "@/content/site";
+import { hero, site } from "@/content/site";
 import { getLocale } from "@/i18n";
 import { publicFileExists } from "@/lib/public-file";
+import { pageMetadata } from "@/lib/seo";
+
+export async function generateMetadata({ params }: PageProps<"/[lang]">): Promise<Metadata> {
+  const { lang, t } = await getLocale(params);
+  return { ...pageMetadata(lang, "", { title: t.meta.title, description: t.meta.description }), title: { absolute: t.meta.title } };
+}
 
 /** Home: somente a capa, com a logo no centro. */
 export default async function Home({ params }: PageProps<"/[lang]">) {
@@ -46,11 +53,13 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         </>
       )}
 
+      {/* título da página para o Google e leitores de tela (a logo já o mostra visualmente) */}
+      <h1 className="sr-only">{t.meta.title}</h1>
       <div className="relative">
         {hasLogo ? (
           <Image
             src={hero.logo}
-            alt={t.meta.title}
+            alt={`${site.name} ${t.tagline}`}
             width={800}
             height={800}
             preload

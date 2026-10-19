@@ -2,9 +2,25 @@ import type { Dictionary } from "../types";
 
 export const it: Dictionary = {
   meta: {
-    title: "Hossony — Liuteria dal 1989",
+    title: "Hossony Liuteria — Liutaio di violini, violoncelli e contrabbassi",
     description:
       "Liuteria Hossony, a Taquarituba (Brasile): violini, viole, violoncelli e contrabbassi costruiti a mano e su misura dal 1989, da Eliel Marcos de Almeida.",
+    keywords: [
+      "liutaio",
+      "liuteria",
+      "liutaio brasiliano",
+      "violino artigianale",
+      "violino fatto a mano",
+      "acquistare violino artigianale",
+      "viola artigianale",
+      "violoncello artigianale",
+      "contrabbasso artigianale",
+      "contrabbasso da orchestra",
+      "strumenti ad arco su misura",
+      "strumenti ad arco",
+      "Brasile",
+      "Hossony",
+    ],
   },
   tagline: "Liuteria",
   since: "Dal 1989",

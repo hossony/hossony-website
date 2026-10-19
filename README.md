@@ -52,3 +52,12 @@ Comprima as fotos antes de subir, por exemplo em squoosh.app (JPG com qualidade 
 - "Como chegar" abre o Google Maps já com a rota até a oficina.
 - O mapa da página de contato é o Google Maps incorporado e não precisa de chave de API.
 - O formulário não precisa de servidor: abre o WhatsApp (14 99680-4141) ou o e-mail já com a mensagem pronta.
+
+## SEO (Google, Bing e buscadores do mundo todo)
+
+- **Domínio**: na Vercel, em **Settings → Environment Variables**, crie `NEXT_PUBLIC_SITE_URL` com o endereço final (ex.: `https://hossony.com.br`) e publique de novo. Sem ela, o site usa o domínio de produção da Vercel. Esse endereço vai no canonical, no sitemap, no Open Graph e nos dados estruturados.
+- **Sitemap e robots**: gerados sozinhos em `/sitemap.xml` (todas as páginas nos 6 idiomas, com hreflang e fotos) e `/robots.txt`.
+- **Idiomas**: cada página indica ao Google as versões nos outros idiomas (`hreflang`). O português vale para Brasil e demais países lusófonos; os outros idiomas valem em qualquer país (inglês nos EUA, espanhol no México e na Argentina etc.).
+- **Dados estruturados** (schema.org): oficina (endereço, telefone, Instagram, instrumentos), site, trilha de navegação e artigos do diário.
+- **Palavras-chave e títulos**: em `meta` de cada idioma (`src/i18n/locales/*.ts`).
+- **Depois de publicar**: cadastre o site no [Google Search Console](https://search.google.com/search-console) e no [Bing Webmaster Tools](https://www.bing.com/webmasters) e envie o `/sitemap.xml`. Crie também o perfil da oficina no [Google Meu Negócio](https://business.google.com) com o mesmo endereço e telefone — é o que mais pesa nas buscas locais ("luthier perto de mim").

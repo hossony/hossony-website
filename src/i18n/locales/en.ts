@@ -2,9 +2,29 @@ import type { Dictionary } from "../types";
 
 export const en: Dictionary = {
   meta: {
-    title: "Hossony — Violin Making since 1989",
+    title: "Hossony Violin Making — Luthier of violins, cellos and double basses",
     description:
       "Hossony violin-making workshop in Taquarituba, Brazil: violins, violas, cellos and double basses made by hand and to order since 1989 by Eliel Marcos de Almeida.",
+    keywords: [
+      "luthier",
+      "violin maker",
+      "Brazilian luthier",
+      "luthier Brazil",
+      "handmade violin",
+      "buy handmade violin",
+      "custom violin",
+      "handmade viola",
+      "handmade cello",
+      "cello maker",
+      "handmade double bass",
+      "upright bass maker",
+      "orchestral double bass",
+      "string instruments made to order",
+      "bowed string instruments",
+      "hand varnished violin",
+      "Eliel Marcos de Almeida",
+      "Hossony",
+    ],
   },
   tagline: "Violin Making",
   since: "Since 1989",

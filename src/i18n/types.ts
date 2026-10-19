@@ -9,7 +9,12 @@ interface Item {
 }
 
 export interface Dictionary {
-  meta: { title: string; description: string };
+  meta: {
+    title: string;
+    description: string;
+    /** Termos de busca (Bing, Yandex, Baidu e o JSON-LD; o Google lê o texto da página). */
+    keywords: string[];
+  };
   tagline: string;
   /** "Desde 1989" */
   since: string;

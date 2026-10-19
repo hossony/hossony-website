@@ -2,9 +2,26 @@ import type { Dictionary } from "../types";
 
 export const de: Dictionary = {
   meta: {
-    title: "Hossony — Geigenbau seit 1989",
+    title: "Hossony Geigenbau — Geigenbauer für Violinen, Celli und Kontrabässe",
     description:
       "Geigenbauwerkstatt Hossony in Taquarituba (Brasilien): Violinen, Bratschen, Violoncelli und Kontrabässe, von Hand und nach Maß gebaut seit 1989 von Eliel Marcos de Almeida.",
+    keywords: [
+      "Geigenbauer",
+      "Geigenbau",
+      "Geigenbauwerkstatt",
+      "brasilianischer Geigenbauer",
+      "handgebaute Geige",
+      "Geige kaufen",
+      "Meistergeige",
+      "Bratsche handgebaut",
+      "Cello handgebaut",
+      "Cellobauer",
+      "Kontrabass handgebaut",
+      "Kontrabassbauer",
+      "Streichinstrumente nach Maß",
+      "Brasilien",
+      "Hossony",
+    ],
   },
   tagline: "Geigenbau",
   since: "Seit 1989",
