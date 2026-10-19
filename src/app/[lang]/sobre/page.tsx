@@ -12,12 +12,13 @@ import { made, photos } from "@/content/site";
 import { getLocale } from "@/i18n";
 import { localeTags } from "@/i18n/config";
 import { publicFileExists } from "@/lib/public-file";
+import { breadcrumbJsonLd, JsonLd, pageMetadata } from "@/lib/seo";
 
 const ROMAN = ["I", "II", "III", "IV", "V"];
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/sobre">): Promise<Metadata> {
-  const { t } = await getLocale(params);
-  return { title: t.nav.about, description: t.about.intro };
+  const { lang, t } = await getLocale(params);
+  return pageMetadata(lang, "/sobre", { title: t.nav.about, description: t.about.intro, image: photos.aboutCover });
 }
 
 export default async function Sobre({ params }: PageProps<"/[lang]/sobre">) {
@@ -28,6 +29,7 @@ export default async function Sobre({ params }: PageProps<"/[lang]/sobre">) {
   return (
     <>
       <main>
+        <JsonLd data={breadcrumbJsonLd(lang, t, [{ name: t.nav.about, path: "/sobre" }])} />
         {/* capa com foto da oficina */}
         <section className="relative flex min-h-[92svh] items-end overflow-hidden bg-nogueira text-cream">
           {hasCover ? (

@@ -7,10 +7,11 @@ import { Reveal } from "@/components/Reveal";
 import { Rich } from "@/components/Rich";
 import { mapsDirectionsUrl, mapsEmbedUrl, photos, site } from "@/content/site";
 import { getLocale } from "@/i18n";
+import { breadcrumbJsonLd, JsonLd, pageMetadata } from "@/lib/seo";
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/contato">): Promise<Metadata> {
-  const { t } = await getLocale(params);
-  return { title: t.nav.contact, description: t.contact.intro };
+  const { lang, t } = await getLocale(params);
+  return pageMetadata(lang, "/contato", { title: t.nav.contact, description: t.contact.intro });
 }
 
 export default async function Contato({ params }: PageProps<"/[lang]/contato">) {
@@ -26,6 +27,7 @@ export default async function Contato({ params }: PageProps<"/[lang]/contato">) 
   return (
     <>
       <main>
+        <JsonLd data={breadcrumbJsonLd(lang, t, [{ name: t.nav.contact, path: "/contato" }])} />
         <PageHeader index="vi." eyebrow={t.contact.eyebrow} title={<Rich parts={t.contact.title} />} intro={t.contact.intro} />
 
         <PhotoBand src={photos.contact} alt={t.alt.contact} tone="#46604b" />

@@ -9,13 +9,14 @@ import { Rich } from "@/components/Rich";
 import { photos, team } from "@/content/site";
 import { getLocale } from "@/i18n";
 import { publicFileExists } from "@/lib/public-file";
+import { breadcrumbJsonLd, JsonLd, pageMetadata } from "@/lib/seo";
 
 const ROMAN = ["I", "II", "III", "IV"];
 const tint = (tone: string, pct: number) => `color-mix(in srgb, ${tone} ${pct}%, var(--color-cream))`;
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/colaboradores">): Promise<Metadata> {
-  const { t } = await getLocale(params);
-  return { title: t.nav.team, description: t.team.intro };
+  const { lang, t } = await getLocale(params);
+  return pageMetadata(lang, "/colaboradores", { title: t.nav.team, description: t.team.intro });
 }
 
 /** Traço de assinatura sob o nome. */
@@ -63,6 +64,7 @@ export default async function Colaboradores({ params }: PageProps<"/[lang]/colab
   return (
     <>
       <main>
+        <JsonLd data={breadcrumbJsonLd(lang, t, [{ name: t.nav.team, path: "/colaboradores" }])} />
         <PageHeader index="iii." eyebrow={`${tm.eyebrow} · ${t.since}`} title={<Rich parts={tm.title} />} intro={tm.intro} />
 
         {/* retratos */}

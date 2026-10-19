@@ -2,9 +2,25 @@ import type { Dictionary } from "../types";
 
 export const fr: Dictionary = {
   meta: {
-    title: "Hossony — Lutherie depuis 1989",
+    title: "Hossony Lutherie — Luthier de violons, violoncelles et contrebasses",
     description:
       "Lutherie Hossony, à Taquarituba (Brésil) : violons, altos, violoncelles et contrebasses faits main et sur mesure depuis 1989 par Eliel Marcos de Almeida.",
+    keywords: [
+      "luthier",
+      "lutherie",
+      "luthier brésilien",
+      "violon artisanal",
+      "violon fait main",
+      "acheter violon artisanal",
+      "alto artisanal",
+      "violoncelle artisanal",
+      "contrebasse artisanale",
+      "contrebasse d’orchestre",
+      "instruments à cordes sur mesure",
+      "instruments à archet",
+      "Brésil",
+      "Hossony",
+    ],
   },
   tagline: "Lutherie",
   since: "Depuis 1989",

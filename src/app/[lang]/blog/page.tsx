@@ -8,10 +8,11 @@ import { Rich } from "@/components/Rich";
 import { photos, postCover, posts } from "@/content/site";
 import { getLocale } from "@/i18n";
 import { formatDate } from "@/i18n/config";
+import { breadcrumbJsonLd, JsonLd, pageMetadata } from "@/lib/seo";
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/blog">): Promise<Metadata> {
-  const { t } = await getLocale(params);
-  return { title: t.nav.journal };
+  const { lang, t } = await getLocale(params);
+  return pageMetadata(lang, "/blog", { title: t.nav.journal, description: `${t.journal.title.join("")} ${t.meta.description}` });
 }
 
 export default async function Blog({ params }: PageProps<"/[lang]/blog">) {
@@ -21,6 +22,7 @@ export default async function Blog({ params }: PageProps<"/[lang]/blog">) {
   return (
     <>
       <main>
+        <JsonLd data={breadcrumbJsonLd(lang, t, [{ name: t.nav.journal, path: "/blog" }])} />
         <PageHeader index="v." eyebrow={j.eyebrow} title={<Rich parts={j.title} />} />
 
         <PhotoBand src={photos.journalCover} alt={t.alt.journalCover} tone="#8c4a22" />

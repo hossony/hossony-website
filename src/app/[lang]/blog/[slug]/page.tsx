@@ -6,7 +6,9 @@ import { Photo } from "@/components/Photo";
 import { Reveal } from "@/components/Reveal";
 import { postCover, posts, type Instrument, type PostSlug } from "@/content/site";
 import { getLocale } from "@/i18n";
-import { formatDate, locales } from "@/i18n/config";
+import { formatDate, localeTags, locales } from "@/i18n/config";
+import { publicFileExists } from "@/lib/public-file";
+import { breadcrumbJsonLd, JsonLd, pageMetadata, shareImage, siteUrl } from "@/lib/seo";
 
 export function generateStaticParams() {
   return locales.flatMap((lang) => posts.map((p) => ({ lang, slug: p.slug })));
@@ -17,9 +19,18 @@ function findPost(slug: string) {
 }
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/blog/[slug]">): Promise<Metadata> {
-  const { t } = await getLocale(params);
+  const { lang, t } = await getLocale(params);
   const post = findPost((await params).slug);
-  return post ? { title: t.journal.posts[post.slug].title, description: t.journal.posts[post.slug].excerpt } : {};
+  if (!post) return {};
+  const text = t.journal.posts[post.slug];
+  const cover = postCover(post.slug);
+  const meta = pageMetadata(lang, `/blog/${post.slug}`, {
+    title: text.title,
+    description: text.excerpt,
+    image: publicFileExists(cover) ? cover : undefined,
+    type: "article",
+  });
+  return { ...meta, openGraph: { ...meta.openGraph, type: "article", publishedTime: post.date } };
 }
 
 export default async function Post({ params }: PageProps<"/[lang]/blog/[slug]">) {
@@ -28,10 +39,30 @@ export default async function Post({ params }: PageProps<"/[lang]/blog/[slug]">)
   if (!post) notFound();
   const text = t.journal.posts[post.slug];
   const others = posts.filter((p) => p.slug !== post.slug).slice(0, 2);
+  const cover = postCover(post.slug);
+  const article = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: text.title,
+    description: text.excerpt,
+    datePublished: post.date,
+    inLanguage: localeTags[lang],
+    image: `${siteUrl}${publicFileExists(cover) ? cover : shareImage.url}`,
+    mainEntityOfPage: `${siteUrl}/${lang}/blog/${post.slug}`,
+    author: { "@type": "Person", name: "Eliel Marcos de Almeida" },
+    publisher: { "@id": `${siteUrl}/#hossony` },
+  };
 
   return (
     <>
       <main>
+        <JsonLd data={article} />
+        <JsonLd
+          data={breadcrumbJsonLd(lang, t, [
+            { name: t.nav.journal, path: "/blog" },
+            { name: text.title, path: `/blog/${post.slug}` },
+          ])}
+        />
         <article className="mx-auto w-full max-w-[760px] px-6 pb-24 pt-36 md:pb-32 md:pt-48">
           <Link href={`/${lang}/blog`} className="eyebrow link-underline fade-up pb-1 text-mute hover:text-ink">
             ← {t.journal.back}
