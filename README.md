@@ -55,7 +55,7 @@ Comprima as fotos antes de subir, por exemplo em squoosh.app (JPG com qualidade 
 
 ## SEO (Google, Bing e buscadores do mundo todo)
 
-- **Domínio**: na Vercel, em **Settings → Environment Variables**, crie `NEXT_PUBLIC_SITE_URL` com o endereço final (ex.: `https://hossony.com.br`) e publique de novo. Sem ela, o site usa o domínio de produção da Vercel. Esse endereço vai no canonical, no sitemap, no Open Graph e nos dados estruturados.
+- **Domínio**: o site usa `https://hossony.com` no canonical, no sitemap, no Open Graph e nos dados estruturados (`src/lib/seo.tsx`). Para trocar sem mexer no código, crie `NEXT_PUBLIC_SITE_URL` na Vercel em **Settings → Environment Variables** e publique de novo.
 - **Sitemap e robots**: gerados sozinhos em `/sitemap.xml` (todas as páginas nos 6 idiomas, com hreflang e fotos) e `/robots.txt`.
 - **Idiomas**: cada página indica ao Google as versões nos outros idiomas (`hreflang`). O português vale para Brasil e demais países lusófonos; os outros idiomas valem em qualquer país (inglês nos EUA, espanhol no México e na Argentina etc.).
 - **Dados estruturados** (schema.org): oficina (endereço, telefone, Instagram, instrumentos), site, trilha de navegação e artigos do diário.

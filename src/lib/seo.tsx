@@ -4,13 +4,10 @@ import { locales, localeTags, type Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/types";
 
 /**
- * Endereço público do site (sem barra no final). Defina NEXT_PUBLIC_SITE_URL na Vercel
- * quando tiver domínio próprio (ex.: https://hossony.com.br). Sem ela, usa o domínio de produção da Vercel.
+ * Endereço público do site (sem barra no final): canonical, sitemap, Open Graph e JSON-LD.
+ * Para trocar sem mexer no código, defina NEXT_PUBLIC_SITE_URL na Vercel.
  */
-export const siteUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL ??
-  (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : "http://localhost:3000")
-).replace(/\/$/, "");
+export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://hossony.com").replace(/\/$/, "");
 
 /** Páginas públicas, sem o prefixo de idioma ("" é a home). */
 export const pagePaths = ["", "/sobre", "/historia", "/colaboradores", "/galeria", "/blog", "/contato"] as const;
