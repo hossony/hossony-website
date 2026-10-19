@@ -26,7 +26,7 @@ Basta salvar os arquivos com estes nomes. O site detecta as fotos no build, sem 
 | Sobre, introdução | `public/fotos/oficina-bancada.jpg` | vertical 4:5 |
 | Sobre, especialidade | `public/fotos/contrabaixo.jpg` e `public/fotos/violoncelo.jpg` | vertical 3:5 |
 | História | `public/fotos/historia.jpg` | horizontal 21:9 |
-| Colaboradores | `public/equipe/eliel-marcos-de-almeida.jpg` e `public/equipe/ricardo-marcos.jpg` | retrato 4:5 |
+| Colaboradores | `public/equipe/elielluthier.jpg` e `public/equipe/ricardo.jpg` | retrato 4:5 |
 | Colaboradores | `public/fotos/familia.jpg` | horizontal 21:9 |
 | Galeria | `public/galeria/contrabaixo-1.jpg`, `violoncelo-1.jpg`, `violino-1.jpg`, `viola-1.jpg` | vertical 4:5 |
 | Diário | `public/fotos/diario.jpg` + `public/blog/<slug-do-artigo>.jpg` | horizontal |

@@ -70,8 +70,8 @@ export const made: { kind: Instrument; count: number }[] = [
 
 /** Colaboradores. Fotos em /public/equipe (retrato vertical, ~1200×1500). */
 export const team = [
-  { id: "eliel", name: "Eliel Marcos de Almeida", initials: "EM", photo: "/equipe/eliel-marcos-de-almeida.jpg", tone: "#8c4a22" },
-  { id: "ricardo", name: "Ricardo Marcos", initials: "RM", photo: "/equipe/ricardo-marcos.jpg", tone: "#46604b" },
+  { id: "eliel", name: "Eliel Marcos de Almeida", initials: "EM", photo: "/equipe/elielluthier.jpg", tone: "#8c4a22" },
+  { id: "ricardo", name: "Ricardo Marcos", initials: "RM", photo: "/equipe/ricardo.png", tone: "#46604b" },
 ] as const;
 export type TeamId = (typeof team)[number]["id"];
 
