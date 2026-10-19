@@ -51,6 +51,8 @@ export function Catalog({ lang, t }: { lang: Locale; t: GalleryDict }) {
                     </span>
                   </Spec>
                   <Spec label={t.specs.varnish}>{text.varnish}</Spec>
+                  {text.wood && <Spec label={t.specs.wood}>{text.wood}</Spec>}
+                  {text.size && <Spec label={t.specs.size}>{text.size}</Spec>}
                   <Spec label={t.specs.inspired}>
                     <span className="serif text-[19px] italic">{text.inspiredBy}</span>
                   </Spec>

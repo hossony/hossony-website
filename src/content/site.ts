@@ -88,10 +88,10 @@ export interface GalleryPiece {
 }
 
 export const gallery: GalleryPiece[] = [
-  { id: "contrabaixo-1", kind: "contrabaixo", tone: "#5f3522", src: "/galeria/contrabaixo3.jpg" },
-  { id: "violoncelo-1", kind: "violoncelo", tone: "#8a4426", src: "/galeria/cello2.jpg" },
-  { id: "violino-1", kind: "violino", tone: "#b5832c", src: "/galeria/violino-1.jpg" },
-  { id: "viola-1", kind: "viola", tone: "#8e2f22", src: "/galeria/viola-1.jpg" },
+  { id: "contrabaixo-1", kind: "contrabaixo", tone: "#8f4f2c", src: "/galeria/contrabaixo3.jpg" },
+  { id: "violoncelo-1", kind: "violoncelo", tone: "#5e2b1d", src: "/galeria/cello2.jpg" },
+  { id: "violino-1", kind: "violino", tone: "#8f4f2c", src: "/galeria/violino.jpg" },
+  { id: "viola-1", kind: "viola", tone: "#4a270b", src: "/galeria/viola.png" },
 ];
 
 /** Diário: slug, data, instrumento da ilustração e foto de capa (public/blog/<slug>.jpg). */

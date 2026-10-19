@@ -91,9 +91,23 @@ export interface Dictionary {
     title: Rich;
     intro: string;
     kinds: Record<Instrument, string>;
-    specs: { model: string; color: string; varnish: string; inspired: string; accessories: string };
+    specs: { model: string; color: string; varnish: string; wood: string; size: string; inspired: string; accessories: string };
     consult: string;
-    items: Record<GalleryId, { name: string; description: string; color: string; varnish: string; inspiredBy: string; accessories: string[] }>;
+    items: Record<
+      GalleryId,
+      {
+        name: string;
+        description: string;
+        color: string;
+        varnish: string;
+        /** Opcional: aparece na ficha só quando preenchido */
+        wood?: string;
+        /** Opcional, ex.: "43 cm" */
+        size?: string;
+        inspiredBy: string;
+        accessories: string[];
+      }
+    >;
   };
   journal: {
     eyebrow: string;
