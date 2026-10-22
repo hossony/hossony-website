@@ -1,6 +1,4 @@
-import Link from "next/link";
-import { gallery } from "@/content/site";
-import type { Locale } from "@/i18n/config";
+import { gallery, whatsappUrl } from "@/content/site";
 import type { Dictionary } from "@/i18n/types";
 import { Photo } from "./Photo";
 import { Reveal } from "./Reveal";
@@ -19,13 +17,15 @@ function Spec({ label, children }: { label: string; children: React.ReactNode })
   );
 }
 
-export function Catalog({ lang, t }: { lang: Locale; t: GalleryDict }) {
+export function Catalog({ t }: { t: GalleryDict }) {
   return (
     <div>
       {gallery.map((item, i) => {
         const text = t.items[item.id];
         const kind = t.kinds[item.kind];
         const reversed = i % 2 === 1;
+        const number = String(i + 1).padStart(2, "0");
+        const message = t.consultMessage.replace("{name}", text.name).replace("{n}", number);
         return (
           <section key={item.id} aria-labelledby={`peca-${i}`} style={{ background: i % 2 ? tint(item.tone, 7) : undefined }}>
             <div className="mx-auto grid max-w-[1320px] items-center gap-10 px-6 py-20 md:grid-cols-2 md:gap-16 md:px-10 md:py-28 lg:gap-24">
@@ -35,7 +35,7 @@ export function Catalog({ lang, t }: { lang: Locale; t: GalleryDict }) {
 
               <Reveal delay={150} className={reversed ? "md:order-1" : ""}>
                 <p className="eyebrow" style={{ color: item.tone }}>
-                  Nº {String(i + 1).padStart(2, "0")} · {kind}
+                  Nº {number} · {kind}
                 </p>
                 <h2 id={`peca-${i}`} className="serif mt-5 text-[42px] font-light leading-[1.02] md:text-[58px]">
                   {text.name}
@@ -68,14 +68,17 @@ export function Catalog({ lang, t }: { lang: Locale; t: GalleryDict }) {
                   </Spec>
                 </dl>
 
-                <Link
-                  href={`/${lang}/contato`}
+                {/* abre o WhatsApp já com a peça na mensagem */}
+                <a
+                  href={whatsappUrl(message)}
+                  target="_blank"
+                  rel="noreferrer"
                   className="eyebrow group/cta mt-10 inline-flex items-center gap-3 pb-1 text-ink transition-colors duration-500 hover:text-[var(--tone)]"
                   style={{ ["--tone" as string]: item.tone }}
                 >
                   <span className="link-underline pb-1">{t.consult}</span>
                   <span aria-hidden className="transition-transform duration-500 group-hover/cta:translate-x-1">→</span>
-                </Link>
+                </a>
               </Reveal>
             </div>
           </section>

@@ -48,7 +48,7 @@ export const fr: Dictionary = {
     rights: "Tous droits réservés",
     handmade: "Fait main, un par un.",
   },
-  cta: { eyebrow: "Sur mesure", title: ["Un instrument ", "en tête", " ?"], button: "Parler au luthier" },
+  cta: { eyebrow: "Sur mesure", title: ["Un instrument ", "en tête", " ?"], button: "Parler au luthier", whatsapp: "Écrire sur WhatsApp" },
   alt: {
     aboutCover: "L’atelier de lutherie Hossony à Taquarituba",
     workshop: "L’établi de l’atelier Hossony et les outils du luthier",
@@ -186,6 +186,7 @@ export const fr: Dictionary = {
     kinds: { violino: "Violon", viola: "Alto", violoncelo: "Violoncelle", contrabaixo: "Contrebasse" },
     specs: { model: "Modèle", color: "Couleur", varnish: "Vernis", wood: "Bois", size: "Taille", inspired: "Inspiré de", accessories: "Accessoires" },
     consult: "Se renseigner sur cet instrument",
+    consultMessage: "Bonjour ! J'ai vu sur votre site la pièce nº {n}, {name}, et j'aimerais en savoir plus.",
     items: {
       "contrabaixo-1": {
         name: "Contrebasse Hossony",

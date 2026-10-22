@@ -22,6 +22,10 @@ export const site = {
   },
 };
 
+/** Link do WhatsApp da oficina, opcionalmente com uma mensagem já escrita. */
+export const whatsappUrl = (text?: string) =>
+  `https://wa.me/${site.contact.whatsapp}${text ? `?text=${encodeURIComponent(text)}` : ""}`;
+
 const mapsQuery = encodeURIComponent(
   `${site.address.street} - ${site.address.district}, Taquarituba - SP, ${site.address.zip}, Brasil`,
 );

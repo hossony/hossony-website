@@ -32,7 +32,7 @@ export interface Dictionary {
   };
   hero: { tagline: string; place: string; discover: string };
   footer: { description: string; navigate: string; workshop: string; rights: string; handmade: string };
-  cta: { eyebrow: string; title: Rich; button: string };
+  cta: { eyebrow: string; title: Rich; button: string; /** Rótulo do botão flutuante de WhatsApp */ whatsapp: string };
   /** Textos alternativos das fotos (acessibilidade e Google) */
   alt: {
     aboutCover: string;
@@ -98,6 +98,8 @@ export interface Dictionary {
     kinds: Record<Instrument, string>;
     specs: { model: string; color: string; varnish: string; wood: string; size: string; inspired: string; accessories: string };
     consult: string;
+    /** Mensagem pronta do WhatsApp ao consultar uma peça. {name} e {n} são substituídos. */
+    consultMessage: string;
     items: Record<
       GalleryId,
       {

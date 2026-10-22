@@ -7,11 +7,13 @@ import { Reveal } from "@/components/Reveal";
 import { Rich } from "@/components/Rich";
 import { mapsDirectionsUrl, mapsEmbedUrl, photos, site } from "@/content/site";
 import { getLocale } from "@/i18n";
+import { publicFileExists } from "@/lib/public-file";
 import { breadcrumbJsonLd, JsonLd, pageMetadata } from "@/lib/seo";
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/contato">): Promise<Metadata> {
   const { lang, t } = await getLocale(params);
-  return pageMetadata(lang, "/contato", { title: t.nav.contact, description: t.contact.intro });
+  const image = publicFileExists(photos.contact) ? photos.contact : undefined;
+  return pageMetadata(lang, "/contato", { title: t.nav.contact, description: t.contact.intro, image });
 }
 
 export default async function Contato({ params }: PageProps<"/[lang]/contato">) {

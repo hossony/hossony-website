@@ -56,7 +56,7 @@ export const pt: Dictionary = {
     rights: "Todos os direitos reservados",
     handmade: "Feito à mão, um a um.",
   },
-  cta: { eyebrow: "Encomendas sob medida", title: ["Tem um instrumento ", "em mente", "?"], button: "Fale com o luthier" },
+  cta: { eyebrow: "Encomendas sob medida", title: ["Tem um instrumento ", "em mente", "?"], button: "Fale com o luthier", whatsapp: "Conversar pelo WhatsApp" },
   alt: {
     aboutCover: "Oficina de luteria Hossony em Taquarituba",
     workshop: "Bancada da oficina Hossony com ferramentas de luteria",
@@ -195,6 +195,7 @@ export const pt: Dictionary = {
     kinds: { violino: "Violino", viola: "Viola", violoncelo: "Violoncelo", contrabaixo: "Contrabaixo" },
     specs: { model: "Modelo", color: "Cor", varnish: "Verniz", wood: "Madeiras", size: "Tamanho", inspired: "Inspirado em", accessories: "Acessórios" },
     consult: "Consultar este instrumento",
+    consultMessage: "Olá! Vi no site a peça Nº {n}, {name}, e gostaria de saber mais.",
     // EDITAR: substitua pelos instrumentos reais (textos aqui e nos outros 5 idiomas)
     items: {
       "contrabaixo-1": {

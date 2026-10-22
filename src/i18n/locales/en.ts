@@ -52,7 +52,7 @@ export const en: Dictionary = {
     rights: "All rights reserved",
     handmade: "Made by hand, one at a time.",
   },
-  cta: { eyebrow: "Made to order", title: ["Have an instrument ", "in mind", "?"], button: "Talk to the luthier" },
+  cta: { eyebrow: "Made to order", title: ["Have an instrument ", "in mind", "?"], button: "Talk to the luthier", whatsapp: "Chat on WhatsApp" },
   alt: {
     aboutCover: "The Hossony violin-making workshop in Taquarituba",
     workshop: "The Hossony workbench with luthier’s tools",
@@ -190,6 +190,7 @@ export const en: Dictionary = {
     kinds: { violino: "Violin", viola: "Viola", violoncelo: "Cello", contrabaixo: "Double bass" },
     specs: { model: "Model", color: "Colour", varnish: "Varnish", wood: "Tonewoods", size: "Size", inspired: "Inspired by", accessories: "Accessories" },
     consult: "Enquire about this instrument",
+    consultMessage: "Hello! I saw the {name} (No. {n}) on your website and would like to know more.",
     items: {
       "contrabaixo-1": {
         name: "Hossony Double Bass",
