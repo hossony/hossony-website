@@ -272,7 +272,7 @@ export const en: Dictionary = {
     eyebrow: "Contact",
     title: ["Let’s talk about your ", "instrument", "."],
     intro: "Commissions, quotes or a visit to the workshop in Taquarituba. Talk directly to the luthier.",
-    labels: { phone: "Phone · WhatsApp", email: "Email", instagram: "Instagram", address: "Workshop" },
+    labels: { phone: "WhatsApp · Eliel Marcos", phoneRicardo: "WhatsApp · Ricardo Marcos", email: "Email", instagram: "Instagram", blog: "Luthier's blog", address: "Workshop" },
     country: "Brazil",
     directions: "Get directions",
     visit: "To visit the workshop, please arrange it first on WhatsApp.",

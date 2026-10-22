@@ -129,7 +129,7 @@ export interface Dictionary {
     eyebrow: string;
     title: Rich;
     intro: string;
-    labels: { phone: string; email: string; instagram: string; address: string };
+    labels: { phone: string; phoneRicardo: string; email: string; instagram: string; blog: string; address: string };
     country: string;
     directions: string;
     visit: string;

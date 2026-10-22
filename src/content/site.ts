@@ -11,8 +11,13 @@ export const site = {
     phone: "+55 14 99680-4141",
     phoneHref: "tel:+5514996804141",
     whatsapp: "5514996804141", // só números, com DDI e DDD
+    /** Ricardo Marcos, filho e luthier da oficina */
+    ricardoPhone: "+55 14 99833-4071",
+    ricardoWhatsapp: "5514998334071",
     instagram: "luthiereliel",
     instagramUrl: "https://www.instagram.com/luthiereliel/",
+    blogUrl: "https://elielmarcos-luthier.blogspot.com/",
+    blogLabel: "elielmarcos-luthier.blogspot.com",
   },
   address: {
     street: "Rua Engenheiro Bernardo Martins Júnior, 25",

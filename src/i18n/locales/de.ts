@@ -269,7 +269,7 @@ export const de: Dictionary = {
     eyebrow: "Kontakt",
     title: ["Sprechen wir über Ihr ", "Instrument", "."],
     intro: "Aufträge, Angebote oder ein Besuch in der Werkstatt in Taquarituba. Sprechen Sie direkt mit dem Geigenbauer.",
-    labels: { phone: "Telefon · WhatsApp", email: "E-Mail", instagram: "Instagram", address: "Werkstatt" },
+    labels: { phone: "WhatsApp · Eliel Marcos", phoneRicardo: "WhatsApp · Ricardo Marcos", email: "E-Mail", instagram: "Instagram", blog: "Blog des Geigenbauers", address: "Werkstatt" },
     country: "Brasilien",
     directions: "Route planen",
     visit: "Für einen Werkstattbesuch vereinbaren Sie bitte vorher einen Termin per WhatsApp.",

@@ -43,6 +43,13 @@ export function Footer({ lang, t }: { lang: Locale; t: Dictionary }) {
               <a href={`https://wa.me/${c.whatsapp}`} target="_blank" rel="noreferrer" className="link-underline hover:text-cream">
                 {c.phone}
               </a>
+              <span className="text-cream/45"> · Eliel</span>
+            </p>
+            <p>
+              <a href={`https://wa.me/${c.ricardoWhatsapp}`} target="_blank" rel="noreferrer" className="link-underline hover:text-cream">
+                {c.ricardoPhone}
+              </a>
+              <span className="text-cream/45"> · Ricardo</span>
             </p>
             <p>
               <a href={`mailto:${c.email}`} className="link-underline break-all hover:text-cream">
@@ -52,6 +59,11 @@ export function Footer({ lang, t }: { lang: Locale; t: Dictionary }) {
             <p>
               <a href={c.instagramUrl} target="_blank" rel="noreferrer" className="link-underline hover:text-cream">
                 @{c.instagram}
+              </a>
+            </p>
+            <p>
+              <a href={c.blogUrl} target="_blank" rel="noreferrer" className="link-underline break-all hover:text-cream">
+                {t.contact.labels.blog}
               </a>
             </p>
           </address>
