@@ -49,7 +49,7 @@ export const de: Dictionary = {
     rights: "Alle Rechte vorbehalten",
     handmade: "Von Hand gebaut, eins nach dem anderen.",
   },
-  cta: { eyebrow: "Nach Maß gebaut", title: ["Haben Sie ein Instrument ", "im Sinn", "?"], button: "Mit dem Geigenbauer sprechen" },
+  cta: { eyebrow: "Nach Maß gebaut", title: ["Haben Sie ein Instrument ", "im Sinn", "?"], button: "Mit dem Geigenbauer sprechen", whatsapp: "Per WhatsApp schreiben" },
   alt: {
     aboutCover: "Die Geigenbauwerkstatt Hossony in Taquarituba",
     workshop: "Die Werkbank von Hossony mit Geigenbauwerkzeug",
@@ -187,6 +187,7 @@ export const de: Dictionary = {
     kinds: { violino: "Violine", viola: "Bratsche", violoncelo: "Violoncello", contrabaixo: "Kontrabass" },
     specs: { model: "Modell", color: "Farbe", varnish: "Lack", wood: "Hölzer", size: "Größe", inspired: "Inspiriert von", accessories: "Zubehör" },
     consult: "Zu diesem Instrument anfragen",
+    consultMessage: "Hallo! Ich habe auf Ihrer Website das Instrument {name} (Nr. {n}) gesehen und hätte gern mehr Informationen.",
     items: {
       "contrabaixo-1": {
         name: "Hossony Kontrabass",

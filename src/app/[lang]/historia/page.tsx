@@ -47,7 +47,10 @@ export default async function Historia({ params }: PageProps<"/[lang]/historia">
                   <span aria-hidden className={`absolute left-[7px] top-3 size-[9px] rotate-45 border bg-cream ${tone.border} md:left-1/2 md:-ml-[4.5px]`} />
                   <Reveal className={`pl-12 md:pl-0 ${right ? "md:col-start-2" : "md:text-right"}`} delay={80}>
                     {isYear ? (
-                      <p className={`serif text-[64px] font-light leading-none md:text-[84px] ${tone.text}`}>{step.era}</p>
+                      <>
+                        <p className={`eyebrow ${tone.text}`}>{ROMAN[i]}</p>
+                        <p className={`serif mt-3 text-[64px] font-light leading-none md:text-[84px] ${tone.text}`}>{step.era}</p>
+                      </>
                     ) : (
                       <p className={`eyebrow ${tone.text}`}>
                         {ROMAN[i]} · {step.era}

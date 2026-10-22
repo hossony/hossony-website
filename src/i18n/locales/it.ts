@@ -48,7 +48,7 @@ export const it: Dictionary = {
     rights: "Tutti i diritti riservati",
     handmade: "Fatto a mano, uno per uno.",
   },
-  cta: { eyebrow: "Strumenti su misura", title: ["Hai uno strumento ", "in mente", "?"], button: "Parla con il liutaio" },
+  cta: { eyebrow: "Strumenti su misura", title: ["Hai uno strumento ", "in mente", "?"], button: "Parla con il liutaio", whatsapp: "Scrivici su WhatsApp" },
   alt: {
     aboutCover: "La bottega di liuteria Hossony a Taquarituba",
     workshop: "Il banco della bottega Hossony con gli attrezzi da liutaio",
@@ -186,6 +186,7 @@ export const it: Dictionary = {
     kinds: { violino: "Violino", viola: "Viola", violoncelo: "Violoncello", contrabaixo: "Contrabbasso" },
     specs: { model: "Modello", color: "Colore", varnish: "Vernice", wood: "Legni", size: "Misura", inspired: "Ispirato a", accessories: "Accessori" },
     consult: "Richiedi informazioni",
+    consultMessage: "Buongiorno! Ho visto sul sito il pezzo n. {n}, {name}, e vorrei avere più informazioni.",
     items: {
       "contrabaixo-1": {
         name: "Contrabbasso Hossony",

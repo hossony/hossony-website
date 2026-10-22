@@ -3,6 +3,7 @@ import { GeistSans } from "geist/font/sans";
 import { Cormorant_Garamond } from "next/font/google";
 import "../globals.css";
 import { Navbar } from "@/components/Navbar";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { hero, site } from "@/content/site";
 import { getLocale, localeParams } from "@/i18n";
 import { localeTags } from "@/i18n/config";
@@ -56,6 +57,7 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
           darkTop={[...(publicFileExists(hero.background) && hero.overlay === "escuro" ? [""] : []), "/sobre"]}
         />
         {children}
+        <WhatsAppButton label={t.cta.whatsapp} />
       </body>
     </html>
   );
