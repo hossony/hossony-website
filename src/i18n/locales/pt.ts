@@ -278,7 +278,7 @@ export const pt: Dictionary = {
     eyebrow: "Contato",
     title: ["Vamos conversar sobre o seu ", "instrumento", "."],
     intro: "Encomendas, orçamentos ou uma visita à oficina em Taquarituba. Fale direto com o luthier.",
-    labels: { phone: "Telefone · WhatsApp", email: "E-mail", instagram: "Instagram", address: "Oficina" },
+    labels: { phone: "WhatsApp · Eliel Marcos", phoneRicardo: "WhatsApp · Ricardo Marcos", email: "E-mail", instagram: "Instagram", blog: "Blog do luthier", address: "Oficina" },
     country: "Brasil",
     directions: "Como chegar",
     visit: "Para visitar a oficina, combine antes pelo WhatsApp.",

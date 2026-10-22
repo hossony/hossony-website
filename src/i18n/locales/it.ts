@@ -268,7 +268,7 @@ export const it: Dictionary = {
     eyebrow: "Contatti",
     title: ["Parliamo del tuo ", "strumento", "."],
     intro: "Commissioni, preventivi o una visita in bottega a Taquarituba. Parla direttamente con il liutaio.",
-    labels: { phone: "Telefono · WhatsApp", email: "E-mail", instagram: "Instagram", address: "Bottega" },
+    labels: { phone: "WhatsApp · Eliel Marcos", phoneRicardo: "WhatsApp · Ricardo Marcos", email: "E-mail", instagram: "Instagram", blog: "Blog del liutaio", address: "Bottega" },
     country: "Brasile",
     directions: "Come arrivare",
     visit: "Per visitare la bottega, accordati prima su WhatsApp.",

@@ -80,7 +80,7 @@ export function businessJsonLd(lang: Locale, t: Dictionary) {
     founder: { "@type": "Person", name: "Eliel Marcos de Almeida", jobTitle: "Luthier" },
     email: site.contact.email,
     telephone: site.contact.phoneHref.replace("tel:", ""),
-    sameAs: [site.contact.instagramUrl],
+    sameAs: [site.contact.instagramUrl, site.contact.blogUrl],
     address: {
       "@type": "PostalAddress",
       streetAddress: site.address.street,

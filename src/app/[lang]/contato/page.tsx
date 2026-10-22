@@ -22,8 +22,10 @@ export default async function Contato({ params }: PageProps<"/[lang]/contato">) 
   const L = t.contact.labels;
   const items = [
     { label: L.phone, value: c.phone, href: `https://wa.me/${c.whatsapp}`, external: true },
+    { label: L.phoneRicardo, value: c.ricardoPhone, href: `https://wa.me/${c.ricardoWhatsapp}`, external: true },
     { label: L.email, value: c.email, href: `mailto:${c.email}`, external: false },
     { label: L.instagram, value: `@${c.instagram}`, href: c.instagramUrl, external: true },
+    { label: L.blog, value: c.blogLabel, href: c.blogUrl, external: true },
   ];
 
   return (
