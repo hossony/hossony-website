@@ -93,9 +93,17 @@ export function businessJsonLd(lang: Locale, t: Dictionary) {
     areaServed: [{ "@type": "Country", name: "Brasil" }, { "@type": "Place", name: "Worldwide" }],
     knowsLanguage: locales.map((l) => localeTags[l]),
     keywords: t.meta.keywords.join(", "),
+    // Instrumentos feitos sob encomenda, sem preço publicado: descritos como serviço de luthieria.
+    // Um "Product" aqui faz o Google exigir offers/review/aggregateRating (snippet de produto) e marcar a página como inválida.
     makesOffer: Object.values(t.about.madeKinds).map((name) => ({
       "@type": "Offer",
-      itemOffered: { "@type": "Product", name, category: "Musical instrument", brand: { "@type": "Brand", name: site.name } },
+      itemOffered: {
+        "@type": "Service",
+        name,
+        serviceType: "Luthiery",
+        category: "Musical instrument making",
+        provider: { "@id": `${siteUrl}/#hossony` },
+      },
     })),
   };
 }
